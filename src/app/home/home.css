@@ -1,0 +1,28 @@
+#center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  margin: 0;
+}
+
+button.btn {
+  color: #00ff00;
+  background-color: #000000;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 30px;
+  border-color: #00ff00;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+  margin: 1vh;
+}
+
+button.btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+}
+

@@ -1,0 +1,67 @@
+<div id="center-horizontal">
+  <div class="key-column">
+    <button (click)="playNote(0);" class="white-key">
+      @if (displayLetters) { <p>C</p> }
+    </button>
+    <button (click)="playNote(1);" class="black-key">
+      @if (displayLetters) { <p>C#</p> }
+    </button>
+    <button (click)="playNote(2);" class="white-key">
+      @if (displayLetters) { <p>D</p> }
+    </button>
+    <button (click)="playNote(3);" class="black-key">
+      @if (displayLetters) { <p>D#</p> }
+    </button>
+    <button (click)="playNote(4);" class="white-key">
+      @if (displayLetters) { <p>E</p> }
+    </button>
+    <button class="black-key hidden"></button>
+    <button (click)="playNote(5);" class="white-key">
+      @if (displayLetters) { <p>F</p> }
+    </button>
+    <button (click)="playNote(6);" class="black-key">
+      @if (displayLetters) { <p>F#</p> }
+    </button>
+    <button (click)="playNote(7);" class="white-key">
+      @if (displayLetters) { <p>G</p> }
+    </button>
+    <button (click)="playNote(8);" class="black-key">
+      @if (displayLetters) { <p>G#</p> }
+    </button>
+    <button (click)="playNote(9);" class="white-key">
+      @if (displayLetters) { <p>A</p> }
+    </button>
+    <button (click)="playNote(10);" class="black-key">
+      @if (displayLetters) { <p>A#</p> }
+    </button>
+    <button (click)="playNote(11);" class="white-key">
+      @if (displayLetters) { <p>B</p> }
+    </button>
+    <button class="black-key hidden"></button>
+    <button (click)="playNote(12);" class="white-key">
+      @if (displayLetters) { <p>C</p> }
+    </button>
+    <button (click)="playNote(13);" class="black-key">
+      @if (displayLetters) { <p>C#</p> }
+    </button>
+    <button (click)="playNote(14);" class="white-key">
+      @if (displayLetters) { <p>D</p> }
+    </button>
+    <button (click)="playNote(15);" class="black-key">
+      @if (displayLetters) { <p>D#</p> }
+    </button>
+    <button (click)="playNote(16);" class="white-key">
+      @if (displayLetters) { <p>E</p> }
+    </button>
+  </div>
+
+  <div>
+    @if (!displayLetters) { <button class="btn" (click)="toggleLetters()">Show Letters</button> }
+    @else { <button class="btn" (click)="toggleLetters()">Hide Letters</button> }
+  </div>
+</div>
+
+<div>
+  <button id="goback-btn" routerLink="">Go Back</button>
+</div>
+

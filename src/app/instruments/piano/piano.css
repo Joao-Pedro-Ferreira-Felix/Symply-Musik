@@ -1,0 +1,99 @@
+#center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
+button#goback-btn {
+  color: #00ff00;
+  background-color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 30px;
+  border-color: #00ff00;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+
+  z-index: -1000;
+}
+
+button#goback-btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+}
+
+.key-column {
+  display: flex;
+  position: absolute;
+  top: 0px;
+}
+
+.white-key {
+  font-size: 3vh;
+  background-color: #ffffff;
+  height: 80vh;
+  width: 12vh;
+  border-radius: 5px;
+  border-color: #111111;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+  margin: -3.1vh;
+
+  /* Pushes the text to the bottom of the white keys */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.white-key:hover {
+  background-color: #00ff00;
+}
+
+.black-key {
+  font-size: 2vh;
+  display: flex;
+  position: relative;
+  background-color: #000000;
+  height: 60vh;
+  width: 6vh;
+  text-decoration: none;
+  border-radius: 10px;
+  border-color: #ffffff;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+  margin: 1px;
+}
+.black-key.hidden { /* Used to hide notes that don't actually exist on a real piano */
+  opacity: 0;
+  z-index: -9999;
+}
+.black-key:hover {
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+
+button.btn {
+  color: #00ff00;
+  background-color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 30px;
+  border-color: #00ff00;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+
+  /* Pushes the button to the bottom of the screen */
+  display: flex;
+  position: relative;
+  top: 90vh;
+}
+
+button.btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+}
