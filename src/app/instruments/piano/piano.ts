@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,6 +8,53 @@ import { RouterLink } from '@angular/router';
   styleUrl: './piano.css',
 })
 export class Piano {
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: any) {
+    console.log(event); // TODO: REMOVE LATER
+
+    switch (event.keyCode) {
+    case 49: // "1"
+      this.playNote(0);
+      break;
+
+    case 50:
+      this.playNote(2);
+      break;
+
+    case 51:
+      this.playNote(4);
+      break;
+
+    case 52:
+      this.playNote(5);
+      break;
+
+    case 53:
+      this.playNote(7);
+      break;
+
+    case 54:
+      this.playNote(9);
+      break;
+
+    case 55:
+      this.playNote(11);
+      break;
+
+    case 56:
+      this.playNote(12);
+      break;
+
+    case 57:
+      this.playNote(14);
+      break;
+
+    case 48:
+      this.playNote(16);
+      break;
+    }
+  }
+
   displayLetters: boolean = true;
   audio: any =
   [
