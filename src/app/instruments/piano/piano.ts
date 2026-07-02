@@ -17,39 +17,67 @@ export class Piano {
       this.playNote(0);
       break;
 
-    case 50:
+    case 83: // "s"
+      this.playNote(1);
+      break;
+
+    case 50: // "2"
       this.playNote(2);
       break;
 
-    case 51:
+    case 68: // "d"
+      this.playNote(3);
+      break;
+
+    case 51: // "3"
       this.playNote(4);
       break;
 
-    case 52:
+    case 52: // "4"
       this.playNote(5);
       break;
 
-    case 53:
+    case 70: // "f"
+      this.playNote(6);
+      break;
+
+    case 53: // "5"
       this.playNote(7);
       break;
 
-    case 54:
+    case 71: // "g"
+      this.playNote(8);
+      break;
+
+    case 54: // "6"
       this.playNote(9);
       break;
 
-    case 55:
+    case 72: // "h"
+      this.playNote(10);
+      break;
+
+    case 55: // "7"
       this.playNote(11);
       break;
 
-    case 56:
+    case 56: // "8"
       this.playNote(12);
       break;
 
-    case 57:
+    case 74: // "j"
+      this.playNote(13);
+      break;
+
+    case 57: // "9"
       this.playNote(14);
       break;
 
-    case 48:
+    case 75: // "k"
+      this.playNote(15);
+      break;
+
+    case 48: // "0"
       this.playNote(16);
       break;
     }
