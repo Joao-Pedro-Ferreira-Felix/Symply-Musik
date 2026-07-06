@@ -51,6 +51,9 @@ button#goback-btn:hover {
 .white-key:hover {
   background-color: #00ff00;
 }
+.white-key.highlight { /* Same as ":hover", but used when the user plays with the computer keyboard */
+  background-color: #00ff00;
+}
 
 .black-key {
   font-size: 2vh;

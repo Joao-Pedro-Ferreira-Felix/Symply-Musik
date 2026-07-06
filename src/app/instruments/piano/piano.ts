@@ -10,8 +10,6 @@ import { RouterLink } from '@angular/router';
 export class Piano {
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: any) {
-    console.log(event); // TODO: REMOVE LATER
-
     switch (event.keyCode) {
     case 49: // "1"
       this.playNote(0);
@@ -83,7 +81,6 @@ export class Piano {
     }
   }
 
-  displayLetters: boolean = true;
   audio: any =
   [
     new Audio('audio/piano-notes/01-C.mp3'),
@@ -104,13 +101,22 @@ export class Piano {
     new Audio('audio/piano-notes/16-Dsharp.mp3'),
     new Audio('audio/piano-notes/17-E.mp3')
   ];
+  playNote(index: number) {
+    this.audio[index].currentTime = 0;
+    this.audio[index].play();
+  }
 
+  displayLetters: boolean = true;
   toggleLetters(): void {
     this.displayLetters = !this.displayLetters;
   }
 
-  playNote(index: number) {
-    this.audio[index].currentTime = 0;
-    this.audio[index].play();
+  /* CSS class name for the highlights is "white-key.highlight" and "black-key.highlight" */
+  noteCssClass: string[] = [ "white-key", "black-key", "white-key", "black-key", "white-key", "white-key", "black-key", "white-key", "black-key", "white-key", "black-key", "white-key", "white-key", "black-key", "white-key", "black-key", "white-key" ]
+  highlightNote(index: number) {
+    this.noteCssClass[index] += " highlight";
+  }
+  unhighlightNote(index: number) {
+    this.noteCssClass[index] = this.noteCssClass[index].split(' ')[0];
   }
 }
