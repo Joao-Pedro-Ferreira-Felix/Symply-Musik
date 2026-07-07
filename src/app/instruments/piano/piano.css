@@ -77,6 +77,10 @@ button#goback-btn:hover {
   background-color: #00ff00;
   border-color: #00ff00;
 }
+.black-key.highlight { /* Same as ":hover", but used when the user plays with the computer keyboard */
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
 
 button.btn {
   color: #00ff00;
