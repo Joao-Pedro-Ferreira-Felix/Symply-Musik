@@ -1,0 +1,53 @@
+#center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
+.string-column {
+  display: flex;
+  position: absolute;
+  top: -10px;
+}
+
+.guitar-background-handle { /* Represents the guitar's handle */
+  background-color: #3d2b1f;
+  height: 70vh;
+}
+
+.guitar-background { /* Represents the part below the handle */
+  background-color: #a08255;
+  position: absolute;
+  width: 60vh;
+  height: 46vh;
+  bottom: -8px;
+  border-radius: 10px;
+}
+
+.guitar-background-soundhole { /* Represents the soundhole of the guitar */
+  background-color: #121212;
+  border-color: #6b4e26;
+  border-style: solid;
+  border-width: 0.5vh;
+  position: absolute;
+  width: 30vh;
+  height: 30vh;
+  bottom: 0px;
+  border-radius: 600px;
+}
+
+
+.guitar-string {
+  height: 100vh;
+  width: 1vh;
+  margin: 1vh;
+  background-color: #545454;
+  border: none;
+  border-radius: 0.3vh;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+}
+.guitar-string:hover {
+  background-color: #00ff00;
+}
