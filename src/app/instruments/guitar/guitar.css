@@ -51,3 +51,7 @@
 .guitar-string:hover {
   background-color: #00ff00;
 }
+
+.guitar-string.highlight { /* Same as ":hover", but used when the user plays with the computer keyboard */
+  background-color: #00ff00;
+}
