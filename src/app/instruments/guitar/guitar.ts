@@ -1,8 +1,9 @@
 import { Component, HostListener } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-guitar',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './guitar.html',
   styleUrl: './guitar.css',
 })

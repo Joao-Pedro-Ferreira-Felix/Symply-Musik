@@ -1,3 +1,7 @@
+<div>
+  <button id="goback-btn" routerLink="">Go Back</button>
+</div>
+
 <div id="center-horizontal">
   <div class="key-column">
     <button (click)="playNote(0);" [className]="noteCssClass[0]">
@@ -59,9 +63,5 @@
     @if (!displayLetters) { <button class="btn" (click)="toggleLetters()">Show Letters</button> }
     @else { <button class="btn" (click)="toggleLetters()">Hide Letters</button> }
   </div>
-</div>
-
-<div>
-  <button id="goback-btn" routerLink="">Go Back</button>
 </div>
 

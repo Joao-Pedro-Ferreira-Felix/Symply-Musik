@@ -5,6 +5,26 @@
   margin: 0;
 }
 
+button#goback-btn {
+  color: #00ff00;
+  background-color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 30px;
+  border-color: #00ff00;
+  display: inline-block; /* Allows padding and margins to work correctly */
+  transition: background-color 0.4s ease;
+
+  z-index: -1000;
+}
+
+button#goback-btn:hover {
+  color: #000000;
+  background-color: #00ff00;
+}
+
 .string-column {
   display: flex;
   position: absolute;
