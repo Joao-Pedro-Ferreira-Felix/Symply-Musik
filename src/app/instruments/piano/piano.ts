@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './piano.css',
 })
 export class Piano {
+  private el = inject(ElementRef);
+
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: any) {
     switch (event.keyCode) {
@@ -124,7 +126,19 @@ export class Piano {
     this.audio[index].currentTime = 0;
     this.audio[index].play();
 
-    this.audio[index].onended = (event: Event) => { console.log('note ended'); this.unhighlightNote(index); console.log(this.noteCssClass); }; // TODO: THIS RIGHT HERE IS WORKING, JUST NOT REFRESHING
+    this.audio[index].onended = (event: Event) => {
+      this.unhighlightNote(index);
+
+      // Here we throw a keydown event because (for some reason) the effects of "unhighlightNote()" only take effect after a key press
+      const keydownEvent = new KeyboardEvent('keydown', {
+        key: 'Enter',
+        code: 'Enter',
+        keyCode: 13,
+        bubbles: true,
+        cancelable: true
+      });
+      this.el.nativeElement.dispatchEvent(keydownEvent);
+    };
   }
 
   displayLetters: boolean = true;

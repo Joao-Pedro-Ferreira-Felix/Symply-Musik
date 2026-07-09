@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,6 +8,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './guitar.css',
 })
 export class Guitar {
+    private el = inject(ElementRef);
+
     @HostListener('window:keydown', ['$event'])
     handleKeyDown(event: any) {
       switch (event.keyCode) {
@@ -82,10 +84,22 @@ export class Guitar {
       this.audio[index].currentTime = 0;
       this.audio[index].play();
 
-      this.audio[index].onended = (event: Event) => { console.log('note ended'); this.unhighlightNote(index); console.log(this.noteCssClass); }; // TODO: THIS RIGHT HERE IS WORKING, JUST NOT REFRESHING
+      this.audio[index].onended = (event: Event) => {
+        this.unhighlightNote(index);
+
+        // Here we throw a keydown event because (for some reason) the effects of "unhighlightNote()" only take effect after a key press
+        const keydownEvent = new KeyboardEvent('keydown', {
+          key: 'Enter',
+          code: 'Enter',
+          keyCode: 13,
+          bubbles: true,
+          cancelable: true
+        });
+        this.el.nativeElement.dispatchEvent(keydownEvent);
+      };
     }
 
-    /* CSS class name for the highlights is "white-key.highlight" and "black-key.highlight" */
+    /* CSS class name for the highlight is "guitar-string.highlight" */
     noteCssClass: string[] = [ "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string", "guitar-string" ]
     highlightNote(index: number) {
       this.noteCssClass[index] += " highlight";
