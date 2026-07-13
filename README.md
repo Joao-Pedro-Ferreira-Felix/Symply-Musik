@@ -11,7 +11,8 @@ A WebSite That Provides You with Simple Music-Making For Your Creative Sparks
 * Different instruments, such as a piano, guitar, drums
 
 ## DEMO
-![Demo](https://i.imgur.com/GQ5fimy.gif)
+![DemoPiano](https://i.imgur.com/GQ5fimy.gif)
+![DemoGuitar](https://i.imgur.com/dbs7wz6.gif)
 
 ## TODO
 1) Add more instruments
