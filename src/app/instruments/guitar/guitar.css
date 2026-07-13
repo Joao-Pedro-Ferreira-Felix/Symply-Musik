@@ -29,11 +29,16 @@ button#goback-btn:hover {
   display: flex;
   position: absolute;
   top: -10px;
+  width: 30vh;
 }
 
 .guitar-background-handle { /* Represents the guitar's handle */
   background-color: #3d2b1f;
-  height: 70vh;
+  height: 83vh;
+  width: 30vh;
+  z-index: 2;
+  position: absolute;
+  top: -10px;
 }
 
 .guitar-background { /* Represents the part below the handle */
@@ -43,6 +48,7 @@ button#goback-btn:hover {
   height: 46vh;
   bottom: -8px;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .guitar-background-soundhole { /* Represents the soundhole of the guitar */
@@ -55,6 +61,7 @@ button#goback-btn:hover {
   height: 30vh;
   bottom: 0px;
   border-radius: 600px;
+  z-index: 10;
 }
 
 
@@ -67,11 +74,14 @@ button#goback-btn:hover {
   border-radius: 0.3vh;
   display: inline-block; /* Allows padding and margins to work correctly */
   transition: background-color 0.4s ease;
+  z-index: 999;
 }
 .guitar-string:hover {
   background-color: #00ff00;
+  z-index: 999;
 }
 
 .guitar-string.highlight { /* Same as ":hover", but used when the user plays with the computer keyboard */
   background-color: #00ff00;
+  z-index: 999;
 }
